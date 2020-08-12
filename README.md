@@ -31,9 +31,27 @@ We evaulated two different machine learning models:
 The most difficult part of the project was finding a good dataset. Initially we wanted to pull in news articles from an API but most of the popular, free APIs (News Api, Stock News API, Yahoo Finance API powered by Rapid API etc.) had limitations with how much data you could pull or how many API calls you were allowed to perform. We also tried to learn how to scrape the web to pull data from SeekingAlpha but the site prohibits news scraping (HTTP error 403). 
 
 
-# Initial DataFrame
+# Initial DataFrame Before PreProcessing
 
 ![alt text](Images/initital_df.png)
+
+# Data Cleanup
+
+The headlines contained punctuation and had to be cleaned up in order to do the analysis. We converted all the headlines to regular expressions:
+
+![alt text](Images/headline_regex.png)
+
+We then converted all of the cells to lowercase strings so the text would be treated equally when implementing the bag of words for the Random Forest Model:
+
+![alt text](Images/convert_lowercase.png)
+
+We then joined all the news sources across all the rows to form one giant string:
+
+![alt text](Images/join_news.png)
+
+Lastly we created a new dataframe using the original date and label column and added a new column showing the combined top 25 news sources for each day “Total News”.
+
+![alt text](Images/new_df.png)
 
 URL for Google CoLab: https://colab.research.google.com/drive/1Z8Sg5yBEaz8Z3iidxGxoqjKTyG0HBPmv?usp=sharing
 URL for Presentation: https://docs.google.com/presentation/d/1OZdSwFY6oAaGBmVpiXtSWOTG1iQGQKcTEvzLdvL_t8I/edit?usp=sharing
