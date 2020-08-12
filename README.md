@@ -12,9 +12,10 @@
 Can we accurately predict the direction of the Dow Jones Industrial Average (DJIA) by analyzing the news sentiment? 
 
 # Hypothesis
-News sentiment drives the short-term performance of the stock market. By analyzing the top news headlines around the world, we should be able to acccurately predict whether the DJIA goes up or down. 
+News headlines drive the near-term performance of the stock market. By analyzing major news headlines around the world on any given day, we should be able to predict the direction of the stock market on that day. 
 
 # How We Performed the Analysis
+Data was provided by Kaggle. The dataset contained the top 25 news headlines and the performance of the DJIA between January 2000 to July 2016. The top 25 news headlines were sourced from the Reddit WorldNews Channel and voted on by Reddit users. Regarding the the performance of the DJIA to represent the stock market. If the market was up, it had a label of ‘1’ and if it was down it had a label of ‘0’. 
 
 URL for Google CoLab: https://colab.research.google.com/drive/1Z8Sg5yBEaz8Z3iidxGxoqjKTyG0HBPmv?usp=sharing
 URL for Presentation: https://docs.google.com/presentation/d/1OZdSwFY6oAaGBmVpiXtSWOTG1iQGQKcTEvzLdvL_t8I/edit?usp=sharing
