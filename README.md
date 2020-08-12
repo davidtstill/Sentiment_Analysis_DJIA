@@ -1,6 +1,5 @@
 # Columbia Fintech Bootcamp - Project 2
-*Assignment - Use Jupyter, Google Colab, or AWS SageMaker to prepare a training and testing dataset and to train the machine-learning model.*
-*Create one or more machine learning models.
+*Assignment - Use Jupyter, Google Colab, or AWS SageMaker to prepare a training and testing dataset and train a machine-learning model.*
 
 # Performing Sentiment Analysis to Predict the Direction of the Dow Jones Industrial Average
 
@@ -23,10 +22,10 @@ Data was provided by Kaggle. The dataset contains 27 total columns:
 - Columns 3-27: Top 25 news headlines. The top 25 news headlines were sourced from the Reddit WorldNews Channel and voted on by Reddit users. 
 
 # Model Summary
-Two different machine learning models 
-- Random Forest using bag-of-words to represent text as bigrams (n=2) represents the frequency of the tokens and we used n-grams for the model.
-- LSTM RNN using tokenization to split the string into tokens Tokenization splits the string into tokens and gives us a sequence of tokens. 
+We evaulated two different machine learning models: 
+1. Random Forest using Scikit-learn's CountVectorizer class to represent text as bigrams (n=2) 
 
+2. LSTM RNN using the the Keras Tokenizer class to vectorize the text
 
 # Data Cleanup & Exploration
 The most difficult part of the project was finding a good dataset. Initially we wanted to pull in news articles from an API but most of the popular, free APIs (News Api, Stock News API, Yahoo Finance API powered by Rapid API etc.) had limitations with how much data you could pull or how many API calls you were allowed to perform. We also tried to learn how to scrape the web to pull data from SeekingAlpha but the site prohibits news scraping (HTTP error 403). 
