@@ -15,11 +15,15 @@ Can we accurately predict the direction of the Dow Jones Industrial Average (DJI
 News headlines drive the near-term performance of the stock market. By analyzing major news headlines around the world on any given day, we should be able to predict the direction of the stock market on that day. 
 
 # How We Performed the Analysis
-Data was provided by Kaggle. The dataset contains 27 total columns:
+Data was provided by Kaggle. The dataset contained 27 total columns:
 
 - Column 1: Date
 - Column 2: Performance of the DJIA. Up days represented as '0' on a down day and '1' on an up day.
 - Columns 3-27: Top 25 news headlines. The top 25 news headlines were sourced from the Reddit WorldNews Channel and voted on by Reddit users. 
+
+# Putting Kaggle dataset into a DataFrame
+
+![alt text](Images/initital_df.png)
 
 # Model Summary
 We evaulated two different machine learning models: 
@@ -28,15 +32,10 @@ We evaulated two different machine learning models:
 
 2. Random Forest using Scikit-learn's CountVectorizer class to represent text as bigrams (n=2) 
 
-Reason why used these two models...
+# Reason why used these two models...
 
 # Data Cleanup & Exploration
 The most difficult part of the project was finding a good dataset. Initially we wanted to pull in news articles from an API but most of the popular, free APIs (News Api, Stock News API, Yahoo Finance API powered by Rapid API etc.) had limitations with how much data you could pull or how many API calls you were allowed to perform. We also tried to learn how to scrape the web to pull data from SeekingAlpha but the site prohibits news scraping (HTTP error 403). 
-
-
-# Initial DataFrame Before PreProcessing
-
-![alt text](Images/initital_df.png)
 
 # Data Cleanup
 
@@ -84,7 +83,8 @@ model_lstm_2.add(Dropout(dropout_fraction))
 ### Output layer
 model_lstm_2.add(Dense(1, activation="sigmoid"))
 
-
+# LSTM Model Evaluations
+Result 
 
 
 
