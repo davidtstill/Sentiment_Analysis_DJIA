@@ -1,7 +1,7 @@
 # Columbia Fintech Bootcamp - Project 2
 *Assignment - Use Jupyter, Google Colab, or AWS SageMaker to prepare a training and testing dataset and train a machine-learning model.*
 
-# Performing Sentiment Analysis to Predict the Direction of the Dow Jones Industrial Average
+# Using Daily News Headlines to Predict the Direction of the Dow Jones Industrial Average
 
 ## Team Members:
 - David Still
@@ -33,7 +33,7 @@ The most difficult part of the project was finding a good dataset. Initially we 
 
 # Initial DataFrame
 
-![alt text](Images/initial_df.png)
+![alt text](images/initial_df.png)
 
 URL for Google CoLab: https://colab.research.google.com/drive/1Z8Sg5yBEaz8Z3iidxGxoqjKTyG0HBPmv?usp=sharing
 URL for Presentation: https://docs.google.com/presentation/d/1OZdSwFY6oAaGBmVpiXtSWOTG1iQGQKcTEvzLdvL_t8I/edit?usp=sharing
