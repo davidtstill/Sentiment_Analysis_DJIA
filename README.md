@@ -1,7 +1,7 @@
 # Columbia Fintech Bootcamp - Project 2
-*Assignment - Create a Machine Learning Model* 
+*Assignment - Use Jupyter, Google Colab, or AWS SageMaker to prepare a training and testing dataset and to train the machine-learning model.* 
 
-# Analyzing Sentiment Analysis to Predict the Direction of the Dow Jones Industrial Average
+# Performing Sentiment Analysis to Predict the Direction of the Dow Jones Industrial Average
 
 ## Team Members:
 - David Still
@@ -12,7 +12,9 @@
 Can we accurately predict the direction of the Dow Jones Industrial Average (DJIA) by analyzing the news sentiment? 
 
 # Hypothesis
+News sentiment drives the short-term performance of the stock market. By analyzing the top news headlines around the world, we should be able to acccurately predict whether the DJIA goes up or down. 
 
+# How We Performed the Analysis
 
 URL for Google CoLab: https://colab.research.google.com/drive/1Z8Sg5yBEaz8Z3iidxGxoqjKTyG0HBPmv?usp=sharing
 URL for Presentation: https://docs.google.com/presentation/d/1OZdSwFY6oAaGBmVpiXtSWOTG1iQGQKcTEvzLdvL_t8I/edit?usp=sharing
