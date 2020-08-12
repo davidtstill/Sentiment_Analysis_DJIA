@@ -57,29 +57,36 @@ Lastly we created a new DataFrame with a "Total News" column that made it possib
 ![alt text](Images/new_df.png)
 
 # LSTM Models
+We ran two LSTM models and varied some of inputs. 
 
-We ran two LSTM models and varied some of innputs. Model 1 used 
+Model 1 had 280 units and 50 epochs: 
 
 ## Define the First LSTM RNN model
 model_lstm = Sequential()
-# Layer 1
+### Layer 1
 model_lstm.add(Embedding(vocabulary_size, embedding_size, input_length=max_words))
-# Layer 2
+### Layer 2
 model_lstm.add(LSTM(units=280))
 # Output layer
 model_lstm.add(Dense(1, activation="sigmoid"))
 
+Model 2 had 50 units and 30 epochs. We also added a 20% dropout rate:
+
 ## Define the Second LSTM RNN model
 model_lstm_2 = Sequential()
 dropout_fraction = 0.2
-# Layer 1
+### Layer 1
 model_lstm_2.add(Embedding(vocabulary_size, embedding_size, input_length=max_words))
 model_lstm_2.add(Dropout(dropout_fraction))
-# Layer 2
+### Layer 2
 model_lstm_2.add(LSTM(units=50))
 model_lstm_2.add(Dropout(dropout_fraction))
-# Output layer
+### Output layer
 model_lstm_2.add(Dense(1, activation="sigmoid"))
+
+
+
+
 
 URL for Google CoLab: https://colab.research.google.com/drive/1Z8Sg5yBEaz8Z3iidxGxoqjKTyG0HBPmv?usp=sharing
 URL for Presentation: https://docs.google.com/presentation/d/1OZdSwFY6oAaGBmVpiXtSWOTG1iQGQKcTEvzLdvL_t8I/edit?usp=sharing
