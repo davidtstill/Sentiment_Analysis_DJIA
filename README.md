@@ -1,6 +1,17 @@
-### Project Collaborators Charles Xia, David Still, Ian Walter
+# Columbia Fintech Bootcamp - Project 2
+*Create a Machine Learning Model* 
 
-# Project 2 News Headline Predicted Stock Movement
+# Using Sentiment Analysis to Predict Direction of the Dow Jones Industrial Average
+
+## Team Members:
+- David Still
+- Charles Xia
+- Ian Walter
+
+# Topic of the Analysis:
+Can we accurately predict the direction of the Dow Jones Industrial Average (DJIA) by analyzing the news sentiment? 
+
+#Hypothesis
 
 URL for Google CoLab: https://colab.research.google.com/drive/1Z8Sg5yBEaz8Z3iidxGxoqjKTyG0HBPmv?usp=sharing
 URL for Presentation: https://docs.google.com/presentation/d/1OZdSwFY6oAaGBmVpiXtSWOTG1iQGQKcTEvzLdvL_t8I/edit?usp=sharing
