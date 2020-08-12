@@ -60,32 +60,46 @@ We ran two LSTM models and varied some of inputs.
 
 Model 1 had 280 units and 50 epochs: 
 
-## Define the First LSTM RNN model
-model_lstm = Sequential()
-### Layer 1
-model_lstm.add(Embedding(vocabulary_size, embedding_size, input_length=max_words))
-### Layer 2
-model_lstm.add(LSTM(units=280))
-# Output layer
-model_lstm.add(Dense(1, activation="sigmoid"))
+![alt text](Images/lstm_1.png)
 
 Model 2 had 50 units and 30 epochs. We also added a 20% dropout rate:
 
-## Define the Second LSTM RNN model
-model_lstm_2 = Sequential()
-dropout_fraction = 0.2
-### Layer 1
-model_lstm_2.add(Embedding(vocabulary_size, embedding_size, input_length=max_words))
-model_lstm_2.add(Dropout(dropout_fraction))
-### Layer 2
-model_lstm_2.add(LSTM(units=50))
-model_lstm_2.add(Dropout(dropout_fraction))
-### Output layer
-model_lstm_2.add(Dense(1, activation="sigmoid"))
+![alt text](Images/lstm_2.png)
 
-# LSTM Model Evaluations
-Result 
+# LSTM Model 1 Evaluation
 
+![alt text](Images/loss_function_1.png)
+![alt text](Images/auc_1.png)
+![alt text](Images/accuracy_1.png)
+
+![alt text](Images/lstm_class_1.png)
+
+# LSTM Model 2 Evaluation
+
+![alt text](Images/loss_function_1.png)
+![alt text](Images/auc_1.png)
+![alt text](Images/accuracy_1.png)
+
+![alt text](Images/lstm_class_2.png)
+
+# Random Forest Model Evaluation:
+
+![alt text](Images/rf_model.png)
+
+![alt text](Images/rf_class.png)
+
+- The model has an accuracy of 86% lending it to work better than the LSTM models
+- If timed allowed, we would have run additional variances of the classifier to see how it would affect the model overall
+
+# Discussion
+It was interesting to see that the two models performed so differently. We assumed LSTM model would perform better because we could adjust the number of hidden layers and add a dropout rate.  
+The LSTM model performed poorly. We ran two models and varied them by changing the number of epochs and units, while one model had a dropout rate of 0.2 and the other did not have one. The  two models had accuracy scores of 0.50 and 0.49 respectively. Both of the models had overfitting; the training data set performed well but the testing dataset did not perform well.  In one of the LSTM models the loss per iteration increased over time. 
+The Random Forest using a bag of words performed markedly better than the LSTM model using sentiment analysis. The Random Forest model had an accuracy score of 0.86, indicating that we were able to predict the direction of the DJIA 86% of the time. 
+
+# Post Mortem
+The most difficult part of the project was finding a good dataset. Initially we wanted to pull in news articles from an API but most of the popular, free APIs (News Api, Stock News API, Yahoo Finance API powered by Rapid API etc.) had limitations with how much data you could pull or how many API calls you were allowed to make. We also tried to scrape the web to pull data from SeekingAlpha but the site prohibits news scraping (HTTP error 403). 
+Given tokenization and vectorization only categorize language, had we have more time we would have implemented a sentiment analysis such as vader to provide additional context to our model for machine learning. 
+If we had been able to pull in real time news data from an API, we would have liked to feed it into one of our models to run an algo trading platform and see how it actually performed. It would also be interesting to see if we could build a model that predicted the actual return of the market versus just the directionality of the market.
 
 
 URL for Google CoLab: https://colab.research.google.com/drive/1Z8Sg5yBEaz8Z3iidxGxoqjKTyG0HBPmv?usp=sharing
