@@ -94,16 +94,20 @@ Despite varying the architecture considerably in both models they are clearly bo
 
 # Random Forest Model Evaluation:
 
+Applying a bag of words using CountVectorizer from the Scikit-learn library and then using a Random Forest classifier. 
+
+More specifically, we used ngram_range = (2,2) and then applied fit_transform on the total news headlines. After that we applied the Random Forest classifier on the training dataset and training label. Finally we use the same transformation on the test dataset.  
+
 ![alt text](Images/rf_model.png)
 
 # Random Forest Model Performance
 
 ![alt text](Images/rf_class.png)
 
-The Random Forest model performed much better with an accuracy score of 86%. 
+The Random Forest model performed much better with an accuracy score of 86%. This means that if we get the news headlines for tomorrow and run this in our model, we should be able to accurately predict whether the DJIA is up or down 86% of the time. 
 
 # Discussion
-It was interesting to see that the two models performed so differently. We assumed LSTM model would perform better because we could adjust the number of hidden layers and add a dropout rate.  Not only were both the LSTM models overfit but in one of the LSTM models, the loss per iteration *increased* over time. 
+It was interesting to see that the two models performed so differently. We assumed LSTM model would perform better because we could adjust the number of hidden layers and add a dropout rate. Not only were both the LSTM models overfit but in one of the LSTM models, the loss per iteration *increased* over time. 
 The Random Forest using a bag of words performed markedly better than the LSTM model using sentiment analysis. The Random Forest model had an accuracy score of 0.86, indicating that we were able to predict the direction of the DJIA 86% of the time. 
 
 # Post Mortem
