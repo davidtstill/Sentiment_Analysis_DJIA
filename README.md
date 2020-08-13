@@ -96,9 +96,9 @@ Despite varying the architecture considerably in both models they are clearly bo
 
 ![alt text](Images/rf_model.png)
 
-![alt text](Images/rf_class.png)
-
 # Random Forest Model Performance
+
+![alt text](Images/rf_class.png)
 
 The Random Forest model performed much better with an accuracy score of 86%. 
 
