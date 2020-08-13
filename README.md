@@ -17,9 +17,9 @@ News headlines drive the near-term performance of the stock market. By analyzing
 # How We Performed the Analysis
 Data was provided by Kaggle. The dataset contained 27 total columns:
 
-- Column 1: Date
-- Column 2: Performance of the DJIA. Up days represented as '0' on a down day and '1' on an up day.
-- Columns 3-27: Top 25 news headlines. The top 25 news headlines were sourced from the Reddit WorldNews Channel and voted on by Reddit users. 
+- Column 0: "Date"
+- Column 1: "Label" reflecing the performance of the DJIA. Up days represented as '0' on a down day and '1' on an up day.
+- Columns 2-26: "Top1, Top2...Top25" reflecing the top 25 headlines. The top 25 news headlines were sourced from the Reddit WorldNews Channel and voted on by Reddit users. 
 
 # Initial DataFrame 
 
@@ -33,16 +33,17 @@ We evaluated two different machine learning models:
 2. Random Forest using Scikit-learn's CountVectorizer class to represent text as bigrams (n=2) 
 
 We chose these two models because they use different types of algorithms. 
-### Random Forest is an algorithm that uses bagging (selects a subset of data) to create a number of weak learners. It uses a subset of those weak learners and each of those features are chosen randomly. The model combines those weak learners to create a stronger classifier that is going to be less likely to overfit. Less prone to overfitting. 
 
-### RNN (recurrent neural network) is able to factor in historical states and values and works with neural net architecture to come up with predicted values. LSTM RNN works like an original RNN, but it selects which types of longer-term events are worth remembering and which are okay to forget. 
+Random Forest is an algorithm that uses bagging (selects a subset of data) to create a number of weak learners. It uses a subset of those weak learners and each of those features are chosen randomly. The model combines those weak learners to create a stronger classifier that is going to be less likely to overfit. Less prone to overfitting. 
+
+RNN (recurrent neural network) is able to factor in historical states and values and works with neural net architecture to come up with predicted values. LSTM RNN works like an original RNN, but it selects which types of longer-term events are worth remembering and which are okay to forget. 
 
 # Data Cleanup & Exploration
 The most difficult part of the project was finding a good dataset. Initially we wanted to pull in news articles from an API but most of the popular, free APIs (News Api, Stock News API, Yahoo Finance API powered by Rapid API etc.) had limitations with how much data you could pull or how many API calls you were allowed to perform. We also tried to learn how to scrape the web to pull data from SeekingAlpha but the site prohibits news scraping (HTTP error 403). 
 
 # Data Cleanup
 
-The headlines contained punctuation and had to be cleaned up in order to do the analysis. We converted all the headlines to regular expressions:
+The headlines in the Kaggle dataset contained punctuation and had to be cleaned up in order to do the analysis. We converted all the headlines to regular expressions:
 
 ![alt text](Images/headline_regex.png)
 
@@ -54,7 +55,7 @@ We then joined all the news sources across all the rows to form one giant string
 
 ![alt text](Images/join_news.png)
 
-Lastly we created a new DataFrame with a "Total News" column that made it possible to perform the analysis:
+With all the news headlines joined togther in one column we then dropped all the individual news columns. The DataFrame is ready to train the models:
 
 ![alt text](Images/new_df.png)
 
