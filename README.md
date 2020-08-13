@@ -21,7 +21,7 @@ Data was provided by Kaggle. The dataset contained 27 total columns:
 - Column 2: Performance of the DJIA. Up days represented as '0' on a down day and '1' on an up day.
 - Columns 3-27: Top 25 news headlines. The top 25 news headlines were sourced from the Reddit WorldNews Channel and voted on by Reddit users. 
 
-# Putting Kaggle dataset into a DataFrame
+# Initial DataFrame 
 
 ![alt text](Images/initital_df.png)
 
