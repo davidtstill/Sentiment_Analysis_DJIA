@@ -86,42 +86,24 @@ Model 2 had 50 units and 30 epochs. We also added a 20% dropout rate:
 
 ![alt text](Images/lstm_class_2.png)
 
+# LSTM Model Performance
+Both of the models performed poorly. The accuracy was only 0.49 in Model 1 and 0.50 in Model 2. Both models were clearly overfit; the training data performed well and the test data performed poorly. 
+
 # Random Forest Model Evaluation:
 
 ![alt text](Images/rf_model.png)
 
 ![alt text](Images/rf_class.png)
 
-- The model has an accuracy of 86% lending it to work better than the LSTM models
-- If timed allowed, we would have run additional variances of the classifier to see how it would affect the model overall
+# Random Forest Model Performance
+
+The Random Forest model performed much better with an accuracy score of 86%. 
 
 # Discussion
-It was interesting to see that the two models performed so differently. We assumed LSTM model would perform better because we could adjust the number of hidden layers and add a dropout rate.  
-The LSTM model performed poorly. We ran two models and varied them by changing the number of epochs and units, while one model had a dropout rate of 0.2 and the other did not have one. The  two models had accuracy scores of 0.50 and 0.49 respectively. Both of the models had overfitting; the training data set performed well but the testing dataset did not perform well.  In one of the LSTM models the loss per iteration increased over time. 
+It was interesting to see that the two models performed so differently. We assumed LSTM model would perform better because we could adjust the number of hidden layers and add a dropout rate.  Not only were both the LSTM models overfit but in one of the LSTM models, the loss per iteration *increased* over time. 
 The Random Forest using a bag of words performed markedly better than the LSTM model using sentiment analysis. The Random Forest model had an accuracy score of 0.86, indicating that we were able to predict the direction of the DJIA 86% of the time. 
 
 # Post Mortem
 The most difficult part of the project was finding a good dataset. Initially we wanted to pull in news articles from an API but most of the popular, free APIs (News Api, Stock News API, Yahoo Finance API powered by Rapid API etc.) had limitations with how much data you could pull or how many API calls you were allowed to make. We also tried to scrape the web to pull data from SeekingAlpha but the site prohibits news scraping (HTTP error 403). 
 Given tokenization and vectorization only categorize language, had we have more time we would have implemented a sentiment analysis such as vader to provide additional context to our model for machine learning. 
 If we had been able to pull in real time news data from an API, we would have liked to feed it into one of our models to run an algo trading platform and see how it actually performed. It would also be interesting to see if we could build a model that predicted the actual return of the market versus just the directionality of the market.
-
-
-URL for Google CoLab: https://colab.research.google.com/drive/1Z8Sg5yBEaz8Z3iidxGxoqjKTyG0HBPmv?usp=sharing
-URL for Presentation: https://docs.google.com/presentation/d/1OZdSwFY6oAaGBmVpiXtSWOTG1iQGQKcTEvzLdvL_t8I/edit?usp=sharing
-
-## Project Proposal
-This project is to utilize news sentiment to predict stock movement. The use of Natural Language Processing (NLP) will generate positive sentiment of news gathered from Reddit's Top 25 headlines. Machine learning models will be run to see if we can predict future good or bad days of the Dow Jones Industrial Average (DJIA). We will be sourcing our data from the a Kaggle dataset and Yahoo Finance.
-
-## Data/Apis Used
-- Kaggle DJIA Dataset
-
-## Machine Learning Models Used
-- Random Forest
-- LSTM RNN
-
-## Technologies Used
-- Google Colab
-- Pandas
-- Numpy
-- Matplotlib
-
