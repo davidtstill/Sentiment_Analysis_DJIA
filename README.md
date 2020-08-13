@@ -26,13 +26,16 @@ Data was provided by Kaggle. The dataset contained 27 total columns:
 ![alt text](Images/initital_df.png)
 
 # Model Summary
-We evaulated two different machine learning models: 
+We evaluated two different machine learning models: 
 
 1. LSTM RNN using the the Keras Tokenizer class to vectorize the text
 
 2. Random Forest using Scikit-learn's CountVectorizer class to represent text as bigrams (n=2) 
 
-# Reason why used these two models...
+We chose these two models because they use different types of algorithms. 
+### Random Forest is an algorithm that uses bagging (selects a subset of data) to create a number of weak learners. It uses a subset of those weak learners and each of those features are chosen randomly. The model combines those weak learners to create a stronger classifier that is going to be less likely to overfit. Less prone to overfitting. 
+
+### RNN (recurrent neural network) is able to factor in historical states and values and works with neural net architecture to come up with predicted values. LSTM RNN works like an original RNN, but it selects which types of longer-term events are worth remembering and which are okay to forget. 
 
 # Data Cleanup & Exploration
 The most difficult part of the project was finding a good dataset. Initially we wanted to pull in news articles from an API but most of the popular, free APIs (News Api, Stock News API, Yahoo Finance API powered by Rapid API etc.) had limitations with how much data you could pull or how many API calls you were allowed to perform. We also tried to learn how to scrape the web to pull data from SeekingAlpha but the site prohibits news scraping (HTTP error 403). 
