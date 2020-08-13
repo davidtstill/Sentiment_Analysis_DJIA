@@ -34,7 +34,7 @@ We evaluated two different machine learning models:
 
 We chose these two models because they use different types of algorithms. 
 
-Random Forest is an algorithm that uses bagging (selects a subset of data) to create a number of weak learners. It uses a subset of those weak learners and each of those features are chosen randomly. The model combines those weak learners to create a stronger classifier that is going to be less likely to overfit. Less prone to overfitting. 
+Random Forest is an algorithm that uses bagging (selects a subset of data) to create a number of weak learners. It uses a subset of those weak learners and each of those features are chosen randomly. The model combines those weak learners to create a stronger classifier that is going to be less prone to overfitting. 
 
 RNN (recurrent neural network) is able to factor in historical states and values and works with neural net architecture to come up with predicted values. LSTM RNN works like an original RNN, but it selects which types of longer-term events are worth remembering and which are okay to forget. 
 
@@ -60,7 +60,7 @@ With all the news headlines joined togther in one column we then dropped all the
 ![alt text](Images/new_df.png)
 
 # LSTM Models
-We ran two LSTM models and varied some of inputs. 
+We ran two LSTM models by varying the architecture for each. 
 
 Model 1 had 280 units and 50 epochs: 
 
