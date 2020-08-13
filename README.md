@@ -86,10 +86,11 @@ Model 2 had 50 units and 30 epochs. We also added a 20% dropout rate:
 
 ![alt text](Images/lstm_class_2.png)
 
-# LSTM Model Performance
-Both of the models performed poorly. The accuracy was only 0.49 in Model 1 and 0.50 in Model 2. Both models were clearly overfit; the training data performed well and the test data performed poorly. 
+# LSTM RNN Model Performance
+Both of the models performed poorly. The accuracy was only 0.49 in Model 1 and 0.50 in Model 2. 
+Both models were clearly overfit; the models were performing too well on the training data and performing very poorly on the testing data. In other words, the models were picking up the noise or random fluctuations in the training data but these concepts did not apply to new data. In Model 2 the loss per iteration was increasing over time when in fact we were hoping for the exact opposite.
 
-Clearly neither of these models would be appropiate to use in an actual trading scenario.
+Despite varying the architecture considerably in both models they are clearly both not appropiate for any actual stock trading scenario.
 
 # Random Forest Model Evaluation:
 
