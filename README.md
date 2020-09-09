@@ -8,7 +8,7 @@
 - Charles Xia
 - Ian Walter
 
-# Topic of the Analysis:
+# Topic of the Analysis
 Can we accurately predict the direction of the Dow Jones Industrial Average (DJIA) by analyzing the news sentiment? 
 
 # Hypothesis
