@@ -1,7 +1,7 @@
 # Columbia Fintech Bootcamp - Project 2
 *Assignment - Use Jupyter, Google Colab, or AWS SageMaker to prepare a training and testing dataset and train a machine-learning model.*
 
-# Using Daily News Headlines to Predict the Direction of the Dow Jones Industrial Average
+# Analyzing Daily News Headlines to Predict the Direction of the Dow Jones Industrial Average
 
 ## Team Members:
 - David Still
